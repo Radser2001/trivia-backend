@@ -12,13 +12,5 @@ app.use(express.json());
 //routes
 app.use(triviaRoutes);
 
-//start server
-// app.listen(
-//   //port
-//   "3001",
-//   //callback function (anonymous)
-//   () => {
-//     //confirm server is running
-//     console.log("Server running on port 3001");
-//   }
-// );
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
