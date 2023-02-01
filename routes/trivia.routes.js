@@ -6,6 +6,10 @@ const {
 } = require("../controllers/trivia");
 const triviaRoutes = express.Router();
 
+triviaRoutes.route("/").get((req, res) => {
+  res.json("Trivia server up and running");
+});
+
 //get endpoint
 triviaRoutes.route("/trivia").get(getAll);
 
